@@ -3,13 +3,50 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5">
+        <listener>
+            <listener-class>helper.ObjectifyHelper</listener-class>
+        </listener>
+        <filter>
+            <filter-name>ObjectifyFilter</filter-name>
+            <filter-class>filter.ObjectifyFilter</filter-class>
+        </filter>    <filter-mapping>
+        <filter-name>ObjectifyFilter</filter-name>
+        <url-pattern>*</url-pattern>
+    </filter-mapping>
 
-    <servlet>
-        <servlet-name>List</servlet-name>
-        <servlet-class>controller.ListEmployeeController</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>List</servlet-name>
-        <url-pattern>/list</url-pattern>
-    </servlet-mapping>
+        <servlet>
+            <servlet-name>CreateEmployee</servlet-name>
+            <servlet-class>controller.EmployeeController</servlet-class>
+        </servlet>
+        <servlet-mapping>
+            <servlet-name>CreateEmployee</servlet-name>
+            <url-pattern>/employee/form</url-pattern>
+        </servlet-mapping>
+        <servlet>
+            <servlet-name>ListEmployee</servlet-name>
+            <servlet-class>controller.EmployeeController</servlet-class>
+        </servlet>
+        <servlet-mapping>
+            <servlet-name>ListEmployee</servlet-name>
+            <url-pattern>/employee/list</url-pattern>
+        </servlet-mapping>
+
+        <filter>
+            <filter-name>ObjecttifyFilter</filter-name>
+            <filter-class>com.googlecode.objectify.ObjectifyFilter</filter-class>
+        </filter>
+        <filter-mapping>
+            <filter-name>ObjecttifyFilter</filter-name>
+         <url-pattern>/*</url-pattern>
+        </filter-mapping>
+
+        <filter>
+            <filter-name>ObjecttifyFilter1</filter-name>
+            <filter-class>helper.ObjectifyHelper</filter-class>
+        </filter>
+        <filter-mapping>
+            <filter-name>ObjecttifyFilter1</filter-name>
+            <url-pattern>/*</url-pattern>
+        </filter-mapping>
+
 </web-app>
