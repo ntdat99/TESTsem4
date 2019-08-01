@@ -1,5 +1,6 @@
 package entity;
 
+import com.googlecode.objectify.Ref;
 public class Employee {
     private long id;
     private String fullName;
@@ -7,7 +8,7 @@ public class Employee {
     private String address;
     private String position;
     private String department;
-
+    Ref<Employee> employeeRef;
     public Employee() {
     }
 
@@ -66,5 +67,12 @@ public class Employee {
 
     public void setDepartment(String department) {
         this.department = department;
+    }
+    public Ref<Employee> getEmployeeRef() {
+        return employeeRef;
+    }
+
+    public void setEmployeeRef(Ref<Employee> studentRef) {
+        this.employeeRef = studentRef;
     }
 }

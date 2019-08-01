@@ -1,6 +1,0 @@
-package controller;
-
-import javax.servlet.http.HttpServlet;
-
-public class CreateEmployeeController extends HttpServlet {
-}

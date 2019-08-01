@@ -20,7 +20,7 @@
 
 <div class="container">
   <h2>Employee</h2>
-    <form action="/action_page.php" class="needs-validation" novalidate>
+    <form action="/employee/resgister" method="post" class="needs-validation" novalidate>
         <div class="form-group">
             <label for="uname">Full Name:</label>
             <input type="text" class="form-control" id="uname" placeholder="Enter full name" name="uname" required>
